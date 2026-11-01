@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>1st Legion Gym — Muay Thai, BJJ, Boxing & MMA in Leicester</title>
+<meta name="description" content="Martial arts gym in Leicester city centre. Muay Thai, Gracie Barra BJJ, boxing, MMA and wrestling. Beginner classes every week, kids from age 4. Start with 5 classes for £25.">
+<meta name="theme-color" content="#0B0B0B">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Archivo+Narrow:wght@700&family=Big+Shoulders+Display:wght@800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0B0B0B; --coal:#171717; --bone:#EDE8DF; --gold:#C9A24A; --red:#C8281F; --smoke:#9A958D; --line:#2C2C2C;
+    --display:"Big Shoulders Display", Impact, sans-serif; --body:"Archivo", system-ui, sans-serif; --label:"Archivo Narrow", "Arial Narrow", sans-serif;
+    --gutter:20px; --bar:96px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:72px}
+  body{background:var(--black);color:var(--bone);font:16px/1.55 var(--body);-webkit-font-smoothing:antialiased;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 var(--gutter)}
+  .label{font:700 13px/1.2 var(--label);letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+  .label.red{color:var(--red)}
+  h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:.9;font-weight:900}
+  h1{font-size:clamp(60px,16vw,140px)}
+  h2{font-size:clamp(44px,11vw,88px)}
+  h3{font-size:clamp(24px,6.5vw,30px);font-weight:800;line-height:1}
+  p.muted{color:var(--smoke)}
+  section{padding:56px 0}
+  .btn{display:flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:0 24px;font:700 15px/1 var(--label);letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--bone);color:var(--bone);background:transparent;cursor:pointer;width:100%}
+  .btn.gold{background:var(--gold);border-color:var(--gold);color:var(--black)}
+  .btn.dark{background:var(--black);border-color:var(--black);color:var(--bone)}
+  .btn svg{width:18px;height:18px;flex:none}
+  .stack>*+*{margin-top:18px}
+
+  /* Top bar */
+  .top{position:sticky;top:0;z-index:30;background:rgba(11,11,11,.96);backdrop-filter:blur(8px);border-bottom:1px solid #232323}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:10px;font:900 24px/1 var(--display);text-transform:uppercase}
+  .brand img{width:34px;height:45px;object-fit:contain}
+  .top-actions{display:flex;gap:8px;align-items:center}
+  .top-actions .book{min-height:44px;padding:0 16px;width:auto}
+  .icon-btn{width:44px;height:44px;display:grid;place-items:center;border:1px solid #3A3A3A;background:none;color:var(--bone);cursor:pointer}
+  .icon-btn svg{width:22px;height:22px}
+
+  /* Menu */
+  .menu{position:fixed;inset:0;z-index:50;background:var(--black);transform:translateX(100%);transition:transform .3s ease;display:flex;flex-direction:column;overflow-y:auto}
+  .menu.open{transform:none}
+  .menu nav,.menu .foot{width:100%;max-width:1100px;margin-left:auto;margin-right:auto}
+  .menu nav a{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #232323;font:800 40px/1 var(--display);text-transform:uppercase}
+  .menu nav a svg{width:22px;height:22px;color:var(--gold)}
+  .menu .foot{padding:16px var(--gutter) 32px;display:grid;gap:12px;margin-top:auto}
+
+  /* Hero */
+  .hero{position:relative;min-height:min(760px,100svh);display:flex;align-items:flex-end;padding:40px 0 32px;background:#000 url(img/photo-pads-muaythai.jpg) 62% 40%/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,11,.15) 0%,rgba(11,11,11,.55) 45%,rgba(11,11,11,.97) 100%)}
+  .hero .wrap{position:relative;width:100%}
+  .hero p.small{font-size:14px;color:var(--smoke);text-align:center}
+
+  /* Proof */
+  .proof{padding-top:8px;padding-bottom:8px}
+  .proof li{display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid #232323;list-style:none}
+  .proof b{font:800 30px/1 var(--display);text-transform:uppercase;color:var(--gold)}
+  .proof span{font-size:14px;color:var(--smoke)}
+
+  /* Finder */
+  .finder{background:var(--coal)}
+  .tabs{display:grid;gap:10px}
+  .tab{text-align:left;padding:18px 20px;background:var(--coal);border:1px solid var(--line);color:var(--bone);cursor:pointer;font:inherit}
+  .tab b{display:block;font:800 26px/1 var(--display);text-transform:uppercase}
+  .tab span{font-size:14px;color:var(--smoke)}
+  .tab[aria-selected=true]{background:var(--gold);border-color:var(--gold);color:var(--black)}
+  .tab[aria-selected=true] span{color:#2B2416}
+  .cards{display:grid;gap:10px}
+  .card{display:block;padding:22px;background:var(--coal);border:1px solid var(--line)}
+  .card .lvl{font:700 12px/1.2 var(--label);letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+  .card h3{margin:8px 0 6px}
+  .card p{font-size:14px;color:var(--smoke)}
+  .card .when{display:flex;gap:8px;align-items:center;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-weight:600}
+  .card .when svg{width:18px;height:18px;color:var(--gold);flex:none}
+  .textlink{display:inline-flex;align-items:center;gap:8px;min-height:44px;font:700 15px/1 var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+  .textlink svg{width:18px;height:18px}
+
+  /* Disciplines */
+  .disc a{display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+  .disc a:first-child{border-top:1px solid var(--line)}
+  .disc .t{flex:1}
+  .disc .n{font:700 13px var(--label);color:var(--gold);margin-right:10px}
+  .disc h3{display:inline}
+  .disc p{font-size:14px;color:var(--smoke);margin-top:6px}
+  .disc svg{width:22px;height:22px;color:var(--gold);flex:none}
+
+  /* Timetable */
+  .light{background:var(--bone);color:var(--black)}
+  .days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+  .day{height:44px;border:0;background:#E2DCD1;font:700 15px var(--label);color:var(--black);cursor:pointer}
+  .day[aria-selected=true]{background:var(--black);color:var(--gold)}
+  .slots li{display:grid;grid-template-columns:52px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid #CFC8BC;list-style:none}
+  .slots time{font:700 13px var(--label);color:var(--red);letter-spacing:.06em}
+  .slots b{display:block;font-weight:600}
+  .slots span{font-size:14px;color:#5C574F}
+  .dot{width:12px;height:12px;border-radius:50%;background:#B88D2C}
+  .legend{display:flex;gap:8px;align-items:center;font-size:14px;color:#3B3833}
+
+  /* First class */
+  .photo{width:100%;aspect-ratio:5/4;object-fit:cover}
+  .steps li{display:grid;grid-template-columns:32px 1fr;gap:16px;padding-top:16px;border-top:1px solid var(--line);list-style:none}
+  .steps li+li{margin-top:16px}
+  .steps .num{font:800 44px/1 var(--display);color:var(--gold)}
+  .steps p{font-size:14px;color:var(--smoke);margin-top:4px}
+
+  /* Coaches */
+  .coaches{background:var(--coal)}
+  .coach-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .coach img{width:100%;aspect-ratio:1/1.1;object-fit:cover}
+  .coach h3{font-size:22px;margin-top:12px}
+  .coach p{font-size:14px;color:var(--smoke)}
+
+  /* Quote */
+  blockquote{font:800 32px/1 var(--display);text-transform:uppercase}
+  .quote-mark{width:36px;color:var(--gold)}
+
+  /* Kids */
+  .kids{padding-top:0}
+  .kids img{width:100%;aspect-ratio:390/240;object-fit:cover;object-position:35% 50%}
+  .kids ul li{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid #CFC8BC;list-style:none}
+  .kids ul b.age{font:800 24px/1 var(--display);color:var(--red)}
+  .kids ul span{display:block;font-size:14px;color:#5C574F}
+
+  /* Prices */
+  .prices{background:var(--gold);color:var(--black);padding:40px 0}
+  .prices .label{color:var(--black)}
+
+  /* FAQ */
+  details{border-bottom:1px solid var(--line)}
+  details:first-of-type{border-top:1px solid var(--line)}
+  summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-weight:600;font-size:17px;cursor:pointer;min-height:44px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font:400 28px/1 var(--body);color:var(--gold)}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--smoke);padding:0 0 20px}
+
+  /* Find us */
+  .map{display:grid;place-items:center;height:200px;background:#1A1A1A;border:1px solid var(--line);text-align:center}
+  .map svg{width:32px;height:32px;color:var(--gold)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+  footer{background:#000;padding:40px 0;font-size:14px;color:var(--smoke)}
+  footer .brand{color:var(--bone);margin-bottom:12px}
+
+  /* Fixed booking bar */
+  .bar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--black);border-top:1px solid var(--line);padding:12px var(--gutter) calc(12px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .bar .btn{min-height:52px;padding:0 10px;font-size:14px;letter-spacing:.05em;white-space:nowrap;gap:8px}
+
+  @media (min-width:900px){
+    :root{--gutter:48px}
+    .tabs,.cards{grid-template-columns:repeat(3,1fr)}
+    .cards{grid-template-columns:repeat(4,1fr)}
+    .coach-grid{grid-template-columns:repeat(5,1fr)}
+    .hero .wrap{max-width:1100px}
+    .hero .wrap>.stack{max-width:720px}
+    .cta-row{display:flex;gap:16px}
+    .cta-row .btn{width:auto}
+    .bar{display:none}
+    body{padding-bottom:0}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/logo-white.png" alt="1st Legion Gym logo">1st Legion</a>
+    <div class="top-actions">
+      <a class="btn gold book" href="https://goteamup.com/p/6346142-1st-legion-gym/c/memberships">Book</a>
+      <button class="icon-btn" id="openMenu" aria-label="Open menu" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-label="Menu">
+  <div class="top" style="position:static"><div class="wrap">
+    <span class="brand"><img src="img/logo-white.png" alt="">1st Legion</span>
+    <button class="icon-btn" id="closeMenu" aria-label="Close menu"><svg><use href="#i-close"/></svg></button>
+  </div></div>
+  <nav class="wrap">
+    <a href="#classes">Classes<svg><use href="#i-arrow"/></svg></a>
+    <a href="#timetable">Timetable<svg><use href="#i-arrow"/></svg></a>
+    <a href="#kids">Kids &amp; Teens<svg><use href="#i-arrow"/></svg></a>
+    <a href="#prices">Prices<svg><use href="#i-arrow"/></svg></a>
+    <a href="#coaches">Coaches<svg><use href="#i-arrow"/></svg></a>
+    <a href="#find-us">Find us<svg><use href="#i-arrow"/></svg></a>
+  </nav>
+  <div class="foot">
+    <a class="btn gold" href="https://goteamup.com/p/6346142-1st-legion-gym/c/memberships">Start — 5 classes for £25<svg><use href="#i-arrow"/></svg></a>
+    <a class="btn" href="tel:+447984482757"><svg><use href="#i-phone"/></svg>Call 07984 482757</a>
+    <p class="muted" style="font-size:14px">Basement Floor, Anup House, 31 St Johns Street, Leicester LE1 3WL</p>
+  </div>
+</div>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="stack">
+        <p class="label">Muay Thai · BJJ · Boxing · MMA</p>
+        <h1>Fighters train here. So do beginners.</h1>
+        <p>A 10,000 sq ft martial arts gym in Leicester city centre — beginner classes every week, kids from age 4.</p>
+        <div class="cta-row stack" style="--gap:12px">
+          <a class="btn gold" href="https://goteamup.com/p/6346142-1st-legion-gym/c/memberships">Start — 5 classes for £25<svg><use href="#i-arrow"/></svg></a>
+          <a class="btn" href="#timetable">This week’s timetable<svg><use href="#i-arrow"/></svg></a>
+        </div>
+        <p class="small">New members · valid 6 weeks · book in TeamUp</p>
+      </div>
+    </div>
+  </section>
+
+  <ul class="proof wrap">
+    <li><b>10,000 sq ft</b><span>Mats, ring, bag room &amp; S&amp;C room</span></li>
+    <li><b>Gracie Barra</b><span>Leicester’s Gracie Barra BJJ academy</span></li>
+    <li><b>Age 4 +</b><span>DBS-checked, first-aid trained coaches</span></li>
+    <li><b>377 reviews</b><span>100% recommend on Facebook</span></li>
+  </ul>
+
+  <section class="finder">
+    <div class="wrap stack">
+      <p class="label">Start here</p>
+      <h2>Who’s training?</h2>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-group="new"><b>I’m completely new</b><span>Show me beginner-friendly classes</span></button>
+        <button class="tab" role="tab" aria-selected="false" data-group="exp"><b>I’ve trained before</b><span>Mixed-level and advanced classes</span></button>
+        <button class="tab" role="tab" aria-selected="false" data-group="kids"><b>It’s for my child</b><span>Kids &amp; teens, age 4–16</span></button>
+      </div>
+      <p class="label" style="color:var(--bone)" id="resultsLabel">Good first classes</p>
+      <div class="cards" id="cards"></div>
+      <a class="textlink" href="#timetable">See every class on the timetable<svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+
+  <section id="classes">
+    <div class="wrap stack">
+      <p class="label">01 — Classes</p>
+      <h2>Choose your discipline</h2>
+      <p class="muted">Every discipline has a beginners or mixed-levels class. Advanced and sparring are by coach invite.</p>
+      <div class="disc">
+        <a href="#timetable"><div class="t"><span class="n">01</span><h3>Muay Thai / K1</h3><p>Striking, clinch — plus ladies-only on Wednesdays</p></div><svg><use href="#i-arrow"/></svg></a>
+        <a href="#timetable"><div class="t"><span class="n">02</span><h3>Gracie Barra BJJ</h3><p>Fundamentals, No-Gi and Advanced</p></div><svg><use href="#i-arrow"/></svg></a>
+        <a href="#timetable"><div class="t"><span class="n">03</span><h3>Boxing</h3><p>Beginners Mon &amp; Wed, 7pm</p></div><svg><use href="#i-arrow"/></svg></a>
+        <a href="#timetable"><div class="t"><span class="n">04</span><h3>MMA</h3><p>Striking, takedowns and groundwork</p></div><svg><use href="#i-arrow"/></svg></a>
+        <a href="#timetable"><div class="t"><span class="n">05</span><h3>Submission Wrestling</h3><p>Grappling without the gi</p></div><svg><use href="#i-arrow"/></svg></a>
+        <a href="#find-us"><div class="t"><span class="n">06</span><h3>Strength &amp; 1-to-1</h3><p>S&amp;C room and personal sessions</p></div><svg><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="light" id="timetable">
+    <div class="wrap stack">
+      <p class="label red">Timetable</p>
+      <h2>This week on the mats</h2>
+      <div class="days" role="tablist" id="days"></div>
+      <ul class="slots" id="slots"></ul>
+      <p class="legend"><span class="dot"></span>Good first class for adults</p>
+      <a class="btn gold" href="https://goteamup.com/p/6346142-1st-legion-gym/c/schedule">Full timetable &amp; booking<svg><use href="#i-arrow"/></svg></a>
+      <p style="font-size:13px;color:#5C574F">Evening &amp; weekend classes shown. Times change — always check TeamUp before you travel.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stack">
+      <img class="photo" src="img/photo-coach-back.jpg" alt="A 1st Legion coach watching pad work" loading="lazy" style="object-position:40% 40%">
+      <p class="label">02 — Your first class</p>
+      <h2>Day one, sorted.</h2>
+      <ol class="steps">
+        <li><span class="num">1</span><div><h3>Get the intro pass</h3><p>5 classes for £25, valid 6 weeks. New members only.</p></div></li>
+        <li><span class="num">2</span><div><h3>Book a beginner-friendly class</h3><p>In the TeamUp app. Cancel 4+ hours before if you can’t make it.</p></div></li>
+        <li><span class="num">3</span><div><h3>Turn up and train</h3><p>Arrive 10 minutes early and tell the coach it’s your first time.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="coaches" id="coaches">
+    <div class="wrap stack">
+      <p class="label">03 — Coaches</p>
+      <h2>Coached by fighters</h2>
+      <p class="muted">Head Coach Jamie McManus: 38+ years in martial arts. Head Boxing Coach Eugene Brown: 40+ years. The team hold regional to World titles.</p>
+      <div class="coach-grid">
+        <div class="coach"><img src="img/coach-jamie.jpg" alt="Jamie McManus" loading="lazy"><h3>Jamie McManus</h3><p>Head Coach</p></div>
+        <div class="coach"><img src="img/coach-eugene.jpg" alt="Eugene Brown" loading="lazy"><h3>Eugene Brown</h3><p>Head Boxing Coach</p></div>
+        <div class="coach"><img src="img/coach-josh.jpg" alt="Josh McManus" loading="lazy"><h3>Josh McManus</h3><p>MMA, Muay Thai &amp; BJJ</p></div>
+        <div class="coach"><img src="img/coach-charlie.jpg" alt="Charlie O'Neil" loading="lazy"><h3>Charlie O’Neil</h3><p>Muay Thai &amp; Boxing</p></div>
+        <div class="coach"><img src="img/coach-george.jpg" alt="George McManus" loading="lazy"><h3>George McManus</h3><p>BJJ</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stack">
+      <svg class="quote-mark" viewBox="0 0 48 40" aria-hidden="true"><path d="M0 40V22C0 9 7 1 19 0v8c-6 1-9 5-9 12h9v20H0Zm29 0V22C29 9 36 1 48 0v8c-6 1-9 5-9 12h9v20H29Z" fill="currentColor"/></svg>
+      <blockquote>I was nervous as anything — but the warm welcome that the coach &amp; team gave me quickly put my fears to rest.</blockquote>
+      <p class="label">Brian — BJJ, Muay Thai &amp; MMA. Lost 5 stone in 18 months.</p>
+      <p class="muted" style="font-size:14px">100% recommend · 377 Facebook reviews</p>
+    </div>
+  </section>
+
+  <section class="light kids" id="kids">
+    <img src="img/photo-gb-wall.jpg" alt="The Gracie Barra wall at 1st Legion" loading="lazy">
+    <div class="wrap stack" style="padding-top:20px">
+      <p class="label red">04 — Kids &amp; teens</p>
+      <h2>Kids &amp; teens, age 4 to 16</h2>
+      <p style="color:#3B3833">DBS-checked, first-aid trained coaches and a viewing area for parents.</p>
+      <ul>
+        <li><b class="age">4–6</b><div><b>Tiny Champs BJJ</b><span>Thu 4:30pm · Sat 9am</span></div></li>
+        <li><b class="age">7–15</b><div><b>Gracie Barra Juniors BJJ</b><span>Mon &amp; Thu 5pm · Sat 9:30am</span></div></li>
+        <li><b class="age">7–15</b><div><b>Muay Thai Juniors</b><span>Tue · Wed · Fri 5pm</span></div></li>
+        <li><b class="age">13–16</b><div><b>Teen MMA</b><span>Wed 5pm</span></div></li>
+      </ul>
+      <p><b>From £40 a month</b> (one class a week).</p>
+      <a class="btn gold" href="mailto:info@1stlegiongym.co.uk?subject=Kids%27%20classes">Ask about kids’ classes<svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+
+  <section class="prices" id="prices">
+    <div class="wrap stack">
+      <p class="label">Start here</p>
+      <h2>5 classes for £25</h2>
+      <p>Then £15 a class, or memberships from £60/month (Boxing). Unlimited £125/month. Students 10% off monthly.</p>
+      <a class="btn dark" href="https://goteamup.com/p/6346142-1st-legion-gym/c/memberships">All prices<svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stack">
+      <p class="label">Good questions</p>
+      <h2>Before your first class</h2>
+      <div>
+        <details open><summary>Do I need to be fit or have experience?</summary><p>No. Beginners and mixed-levels classes are built for people starting from scratch. Advanced classes and sparring are by coach invite, so nobody gets thrown in at the deep end.</p></details>
+        <details><summary>What should I wear and bring?</summary><p>Comfortable gym kit and a bottle of water. Ask the coach about gloves and kit on your first visit.</p></details>
+        <details><summary>How do I book?</summary><p>Buy the 5-class intro pass, then book each class in advance in the TeamUp app. Can’t make it? Cancel at least 4 hours before.</p></details>
+        <details><summary>Is there a women-only class?</summary><p>Yes — Ladies Muay Thai runs on Wednesdays at 6pm.</p></details>
+        <details><summary>Can I watch my child’s class?</summary><p>Yes. There’s a designated viewing area so parents can watch every session.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="find-us">
+    <div class="wrap stack">
+      <p class="label">05 — Find us</p>
+      <h2>Basement floor, Anup House</h2>
+      <p>31 St Johns Street, Leicester LE1 3WL</p>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&query=Anup+House+31+St+Johns+Street+Leicester+LE1+3WL"><span><svg><use href="#i-pin"/></svg><br><span class="label" style="color:var(--bone)">Open in Google Maps</span></span></a>
+      <div class="two">
+        <a class="btn" href="tel:+447984482757"><svg><use href="#i-phone"/></svg>Call</a>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Anup+House+31+St+Johns+Street+Leicester+LE1+3WL"><svg><use href="#i-pin"/></svg>Directions</a>
+      </div>
+      <p class="muted" style="font-size:14px">info@1stlegiongym.co.uk · @1stlegiongym</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><img src="img/logo-white.png" alt="">1st Legion Gym</div>
+    <p>Classes · Timetable · Kids &amp; Teens · Prices · Coaches · Find us</p>
+    <p style="margin-top:8px">© 2026 1st Legion Gym · Bookings powered by TeamUp</p>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn" href="#timetable">Timetable</a>
+  <a class="btn gold" href="https://goteamup.com/p/6346142-1st-legion-gym/c/memberships">5 classes · £25<svg><use href="#i-arrow"/></svg></a>
+</div>
+
+<script>
+  // Menu
+  const menu=document.getElementById('menu'), openB=document.getElementById('openMenu');
+  const setMenu=o=>{menu.classList.toggle('open',o);openB.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''};
+  openB.onclick=()=>setMenu(true); document.getElementById('closeMenu').onclick=()=>setMenu(false);
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+
+  // Class finder (times from TeamUp, week of 26 Oct 2026)
+  const groups={
+    new:{label:'Good first classes',items:[
+      ['Beginner friendly','Beginners Boxing','Fitness, footwork and technique for complete beginners.','Mon & Wed · 7pm'],
+      ['Beginners / mixed','Muay Thai / K1','Kicks, punches, knees and elbows from the ground up.','Mon 6pm · Tue & Thu 7pm · Sun 10am'],
+      ['16-week programme','Gracie Barra BJJ Fundamentals','Brazilian Jiu-Jitsu basics, including self-defence.','Mon & Thu 7pm · weekday mornings'],
+      ['Women only','Ladies Muay Thai','Muay Thai in a women-only class.','Wed · 6pm']]},
+    exp:{label:'Mixed & advanced',items:[
+      ['Advanced','Muay Thai / K1 Advanced','Combinations, clinch, counters and sparring prep.','Tue & Thu · 6pm'],
+      ['Advanced','Gracie Barra BJJ Advanced','Advanced techniques, drilling and rolling.','Mon & Thu · 6pm'],
+      ['Mixed levels','MMA','Striking, takedowns, clinch and groundwork.','Wed 12pm & 6pm · Sat 11:30am'],
+      ['Mixed levels','No-Gi BJJ & Submission Wrestling','Grappling without the gi.','Lunchtimes · Wed 7pm · Sat 10:15am']]},
+    kids:{label:'Kids & teens',items:[
+      ['Ages 4–6','Tiny Champs BJJ','A first taste of Brazilian Jiu-Jitsu.','Thu 4:30pm · Sat 9am'],
+      ['Ages 7–15','Gracie Barra Juniors BJJ','Structured BJJ for juniors.','Mon & Thu 5pm · Sat 9:30am'],
+      ['Ages 7–15','Muay Thai Juniors','Striking skills, fitness and confidence.','Tue · Wed · Fri 5pm'],
+      ['Ages 13–16','Teen MMA','Mixed martial arts for teenagers.','Wed · 5pm']]}};
+  const cards=document.getElementById('cards'), rl=document.getElementById('resultsLabel');
+  const renderGroup=g=>{rl.textContent=groups[g].label;cards.innerHTML=groups[g].items.map(([l,n,d,t])=>`<a class="card" href="https://goteamup.com/p/6346142-1st-legion-gym/c/schedule"><span class="lvl">${l}</span><h3>${n}</h3><p>${d}</p><span class="when"><svg><use href="#i-clock"/></svg>${t}</span></a>`).join('')};
+  document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',x===t));renderGroup(t.dataset.group)});
+  renderGroup('new');
+
+  // Timetable (evenings & weekends, week of 26 Oct 2026)
+  const week={Mon:[['17:00','GB BJJ Juniors','Ages 7–15',0],['18:00','Muay Thai / K1','Beginners / mixed',1],['18:00','GB BJJ Advanced','Advanced',0],['19:00','Beginners Boxing','Beginners',1],['19:00','GB BJJ Fundamentals','All levels',1]],
+    Tue:[['17:00','Muay Thai Juniors','Ages 7–15',0],['17:00','GB BJJ Fundamentals','All levels',1],['18:00','Muay Thai / K1','Advanced',0],['18:00','No-Gi BJJ','Mixed levels',1],['19:00','Muay Thai','Beginners / mixed',1]],
+    Wed:[['17:00','Teen MMA','Ages 13–16',0],['17:00','Muay Thai Juniors','Ages 7–15',0],['18:00','Ladies Muay Thai','Women only',1],['18:00','MMA','Mixed levels',1],['19:00','Beginners Boxing','Beginners',1],['19:00','Submission Wrestling','Mixed levels',1]],
+    Thu:[['16:30','Tiny Champs BJJ','Ages 4–6',0],['17:00','GB BJJ Juniors','Ages 7–15',0],['18:00','Muay Thai / K1','Advanced',0],['18:00','GB BJJ Advanced','Advanced',0],['19:00','GB BJJ Fundamentals','All levels',1],['19:00','Muay Thai / K1','Beginners / mixed',1]],
+    Fri:[['17:00','Muay Thai Juniors','Ages 7–15',0],['18:00','Sparring','Advanced · invite',0],['19:00','Sparring','Mixed · invite',0]],
+    Sat:[['09:00','Tiny Champs BJJ','Ages 4–6',0],['09:30','GB BJJ Juniors','Ages 7–15',0],['10:15','Submission Wrestling','Mixed levels',1],['11:30','MMA','Mixed levels',1]],
+    Sun:[['10:00','Muay Thai','Beginners / mixed',1]]};
+  const days=document.getElementById('days'), slots=document.getElementById('slots');
+  const keys=Object.keys(week); const today=keys[(new Date().getDay()+6)%7];
+  const renderDay=d=>{days.querySelectorAll('.day').forEach(b=>b.setAttribute('aria-selected',b.dataset.d===d));slots.innerHTML=week[d].map(([t,n,l,b])=>`<li><time>${t}</time><div><b>${n}</b><span>${l}</span></div>${b?'<span class="dot" title="Good first class"></span>':'<span></span>'}</li>`).join('')};
+  days.innerHTML=keys.map(d=>`<button class="day" role="tab" data-d="${d}" aria-label="${d}">${d[0]}</button>`).join('');
+  days.querySelectorAll('.day').forEach(b=>b.onclick=()=>renderDay(b.dataset.d));
+  renderDay(today);
+</script>
+</body>
+</html>
